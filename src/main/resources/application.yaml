@@ -1,0 +1,37 @@
+
+server:
+  port: #port
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: #url
+    username: #username
+    password: #password
+    hikari:
+      schema: hakaton
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  mustache:
+    check-template-location: false
+
+vaadin:
+  whitelisted-packages: com.vaadin,org.vaadin,dev.hilla,com.example.application
+  launch-browser: true
+
+  logging:
+    level:
+      org.atmosphere: warn

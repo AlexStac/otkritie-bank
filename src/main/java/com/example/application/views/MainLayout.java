@@ -74,10 +74,10 @@ public class MainLayout extends AppLayout {
             nav.addItem(new AppNavItem("Upload/file", UploadfileView.class, "la la-file-csv"));
 
         }
-        if (accessChecker.hasAccess(UploadtextView.class)) {
-            nav.addItem(new AppNavItem("Upload/text", UploadtextView.class, "la la-envelope-open-text"));
-
-        }
+//        if (accessChecker.hasAccess(UploadtextView.class)) {
+//            nav.addItem(new AppNavItem("Upload/text", UploadtextView.class, "la la-envelope-open-text"));
+//
+//        }
 
         return nav;
     }
